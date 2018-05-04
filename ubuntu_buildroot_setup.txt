@@ -1,1 +1,2 @@
 apt-get install build-essential ncurses-base ncurses-bin libncurses5-dev dialog libssl-dev
+apt-get install qemu-kvm qemu virt-manager virt-viewer libvirt-bin
