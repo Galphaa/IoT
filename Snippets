@@ -1,3 +1,7 @@
+make qemu_x86_defconfig
+sed -i -e 's/BR2_TARGET_GENERIC_GETTY_PORT="tty1"/BR2_TARGET_GENERIC_GETTY_PORT="ttyS0"/g' .config
+make
+
 qemu-system-i386 --kernel output/images/bzImage \
 --hda output/images/rootfs.ext2 --nographic \
 --append "console=tty1 root=/dev/sda"
